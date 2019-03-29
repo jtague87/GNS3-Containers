@@ -5,7 +5,7 @@ FROM ubuntu:xenial
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y --no-install-recommends \
     install telnet curl openssh-client nano vim-tiny iputils-ping python build-essential \
     libssl-dev libffi-dev python-pip python3-pip python-setuptools python3-setuptools \
-    python-dev net-tools python3 software-properties-common \
+    python-dev net-tools python3 software-properties-common git \
     && apt-add-repository -y ppa:ansible/ansible-2.7 \
     && apt-get update && apt-get -y --no-install-recommends install ansible \
     && rm -rf /var/lib/apt/lists/* \
